@@ -1,10 +1,10 @@
 # CodexBridge Deployer
 
-个人自用的 CodexBridge 微信接入部署助手。
+个人自用的 CodexBridge 微信接入部署代码包。
 
 > Personal use only. 这是我自己实测 CodexBridge 后整理出来的小工具，不是 OpenAI、微信、OpenClaw 或 CodexBridge 官方项目。
 
-目标不是让小程序直接改用户电脑，而是把最容易卡住的步骤变成清晰的 guide：
+目标是把这次成功接入的步骤沉淀成可复用 code：
 
 - 检查 Node.js、Git、Codex CLI
 - 下载或更新 CodexBridge
@@ -15,22 +15,22 @@
 ## 项目结构
 
 ```text
-miniapp/       微信小程序原型，用来 guide 用户复制部署命令
 installer/     本机部署脚本，真正执行 deploy
 docs/          这次成功部署的经验笔记
 ```
 
-## Demo 路线
+## 使用路线
 
-1. 用微信开发者工具打开 `miniapp`。
-2. 在首页选择 Windows。
-3. 复制安装命令。
-4. 在 PowerShell 里运行脚本。
-5. 扫码登录后，启动 bridge。
+1. clone 这个 repo。
+2. 在 PowerShell 里运行 Windows installer。
+3. 扫码登录后，启动 bridge。
+4. 在微信里发 `/h` 或短消息 test。
 
 ## 产品定位
 
-第一版只针对“已经有 Codex 账号，并且愿意在本机运行脚本”的用户。
+当前版本只针对“已经有 Codex 账号，并且愿意在本机运行脚本”的用户。
+
+目前没有上线小程序，也不包含小程序发布材料。
 
 暂时不解决：
 
@@ -78,13 +78,3 @@ docs/SUCCESS_NOTES.md
 - 建议先用小号 test。
 - 不要提交 token、二维码、运行日志。
 - 这个 repo 只记录个人使用经验，不保证适用于所有环境。
-
-## 发布前要替换
-
-小程序里的安装命令目前使用：
-
-```text
-https://example.com/install-codexbridge.ps1
-```
-
-正式发布前，需要把脚本上传到自己的 HTTPS 域名，并替换 `miniapp/pages/index/index.js` 里的地址。
