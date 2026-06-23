@@ -1,0 +1,152 @@
+.page {
+  padding: 18px;
+}
+
+.header {
+  padding: 22px 0 14px;
+}
+
+.title {
+  color: #111827;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.subtitle {
+  color: #5b6472;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 14px;
+  padding: 14px;
+}
+
+.section-title {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.segmented {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.segment {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 13px;
+  line-height: 36px;
+  min-height: 36px;
+  padding: 0;
+}
+
+.segment.active {
+  background: #111827;
+  border-color: #111827;
+  color: #ffffff;
+}
+
+.command {
+  background: #111827;
+  border-radius: 6px;
+  color: #e5e7eb;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  padding: 12px;
+}
+
+.actions {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 12px;
+}
+
+.primary,
+.secondary {
+  font-size: 13px;
+  line-height: 38px;
+  min-height: 38px;
+  padding: 0 8px;
+}
+
+.primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.secondary {
+  background: #eef2ff;
+  color: #1f3a8a;
+}
+
+.check-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.check-item + .check-item {
+  border-top: 1px solid #eef0f3;
+}
+
+.dot {
+  align-items: center;
+  background: #e0f2fe;
+  border-radius: 999px;
+  color: #075985;
+  display: flex;
+  flex: 0 0 26px;
+  font-size: 12px;
+  font-weight: 700;
+  height: 26px;
+  justify-content: center;
+  margin-top: 2px;
+  width: 26px;
+}
+
+.check-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.check-title {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.check-desc {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.55;
+  margin-top: 3px;
+}
+
+.warning {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.note {
+  color: #7c2d12;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.note + .note {
+  margin-top: 6px;
+}

@@ -1,0 +1,19 @@
+# Runtime and local state
+.env
+.env.*
+*.log
+node_modules/
+
+# WeChat / CodexBridge local state
+.codexbridge/
+runtime/
+accounts/
+login/
+serve/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

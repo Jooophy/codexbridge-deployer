@@ -1,0 +1,47 @@
+<view class="page">
+  <view class="header">
+    <view class="title">CodexBridge 部署助手</view>
+    <view class="subtitle">给已有 Codex 用户，把微信桥接部署步骤压到一条 command。</view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">系统</view>
+    <view class="segmented">
+      <button
+        wx:for="{{platforms}}"
+        wx:key="id"
+        class="segment {{selectedPlatform === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="selectPlatform"
+      >{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">部署命令</view>
+    <view class="command">{{command}}</view>
+    <view class="actions">
+      <button class="primary" bindtap="copyCommand">复制命令</button>
+      <button class="secondary" bindtap="copyLocalCommand">复制本地测试命令</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">流程 check</view>
+    <view class="checklist">
+      <view class="check-item" wx:for="{{steps}}" wx:key="title">
+        <view class="dot">{{index + 1}}</view>
+        <view class="check-copy">
+          <view class="check-title">{{item.title}}</view>
+          <view class="check-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section warning">
+    <view class="section-title">注意</view>
+    <view class="note">小程序不能直接控制用户电脑。真正的安装动作必须由用户在本机终端运行 installer。</view>
+    <view class="note">个人微信桥接不是 OpenAI 官方能力，适合先用小号 test。</view>
+  </view>
+</view>
